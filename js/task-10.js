@@ -3,7 +3,7 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-// Напиши скрипт створення і очищення колекції елементів. Користувач вводить кількість елементів в input 
+// Напиши скрипт створення і очищення колекції елементів. Користувач вводить кількість елементів в input
 // і натискає кнопку Створити, після чого рендериться колекція. Натисненням на кнопку Очистити, колекція елементів очищається.
 
 // <div id="controls">
@@ -14,7 +14,7 @@ function getRandomHexColor() {
 
 // <div id="boxes"></div>
 
-// Створи функцію createBoxes(amount), яка приймає один параметр - число. 
+// Створи функцію createBoxes(amount), яка приймає один параметр - число.
 // Функція створює стільки <div>, скільки вказано в amount і додає їх у div#boxes.
 
 // Розміри найпершого <div> - 30px на 30px.
@@ -27,20 +27,21 @@ const btnDestroy = document.querySelector("button[data-destroy]");
 const numberInput = document.querySelector("input");
 const boxes = document.querySelector("#boxes");
 
-btnCreate.addEventListener("click", () => {createBoxes(numberInput.valueAsNumber)});
+btnCreate.addEventListener("click", () => {
+  createBoxes(numberInput.valueAsNumber);
+});
 btnDestroy.addEventListener("click", destroyBoxes);
 
-function createBoxes(amount){
-let boxesList ="";
-let size = 30;
- for (let i = 0; i < amount; i++){
-boxesList += `<div  style="background-color:${getRandomHexColor()}; height:${size}px; width:${size}px;"></div>`;
-size +=10;
-}
-boxes.insertAdjacentHTML("beforeend", boxesList);
+function createBoxes(amount) {
+  let boxesList = "";
+  let size = 30;
+  for (let i = 0; i < amount; i++) {
+    boxesList += `<div  style="background-color:${getRandomHexColor()}; height:${size}px; width:${size}px;"></div>`;
+    size += 10;
+  }
+  boxes.insertAdjacentHTML("beforeend", boxesList);
 }
 
-
-function destroyBoxes(){
-  boxes.innerHTML =" ";
+function destroyBoxes() {
+  boxes.innerHTML = " ";
 }

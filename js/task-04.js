@@ -18,11 +18,11 @@ counterMinus.addEventListener("click", decrement);
 counterPlus.addEventListener("click", increment);
 
 let value = 0;
-function increment(){
-    value +=1;
-    counterValue.textContent = value;
+function increment() {
+  value += 1;
+  counterValue.textContent = value;
 }
-function decrement(){
-    value -= 1;
-    counterValue.textContent = value;
+function decrement() {
+  value -= 1;
+  counterValue.textContent = value;
 }
