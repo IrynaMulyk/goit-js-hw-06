@@ -17,23 +17,8 @@ const gallery = document.querySelector(".gallery");
 const imagesList = images
   .map(
     (image) =>
-      `<li><img src=${image.url} alt=${image.alt} width=200></img></li>`
+      `<li><img src=${image.url} alt=${image.alt} width=200 class=image></img></li>`
   )
   .join("");
 
-const style = document.createElement("style");
-style.innerHTML = `
-  .gallery {
-  list-style:none;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  }
-  img {
-    display: block;
-  }
-  `;
-
-document.head.appendChild(style);
 gallery.insertAdjacentHTML("beforeend", imagesList);

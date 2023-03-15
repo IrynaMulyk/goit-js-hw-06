@@ -32,13 +32,12 @@ function handleSubmit(event) {
 
   if (email.value === "" || password.value === "") {
     alert("Please fill in all the fields!");
+  } else {
+    let object = {
+      email: email.value,
+      password: password.value,
+    };
+    console.log(object);
+    event.currentTarget.reset();
   }
-
-  let object = {
-    email: email.value,
-    password: password.value,
-  };
-  console.log(object);
-
-  event.currentTarget.reset();
 }

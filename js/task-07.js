@@ -11,6 +11,13 @@ const output = document.querySelector("#text");
 
 output.style.fontSize = slider.value;
 
-slider.oninput = function () {
+function changeSize() {
   output.style.fontSize = this.value + "px";
-};
+}
+
+slider.addEventListener("input", changeSize);
+
+// друга версія
+// slider.oninput = function () {
+//   output.style.fontSize = this.value + "px";
+// };

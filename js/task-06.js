@@ -27,7 +27,10 @@ console.log(inputEl.dataset.length);
 inputEl.addEventListener("blur", checkInput);
 
 function checkInput() {
-  inputEl.value.length == inputEl.dataset.length
-    ? inputEl.classList.add("valid")
-    : inputEl.classList.add("invalid");
+  if (inputEl.value.length.toString() == inputEl.dataset.length) {
+    inputEl.classList.add("valid");
+    inputEl.classList.remove("invalid");
+  } else {
+    inputEl.classList.add("invalid");
+  }
 }
