@@ -22,7 +22,6 @@
 //   border-color: #f44336;
 // }
 const inputEl = document.querySelector("#validation-input");
-console.log(inputEl.dataset.length);
 
 inputEl.addEventListener("blur", checkInput);
 
